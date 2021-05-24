@@ -17,6 +17,9 @@ urlpatterns = [
     path('tecnologia/',List.as_view(),{'category_name':'tecnologia'}, name = 'tecnologia'),
     path('contact_form/', ContactForm.as_view(), name = 'contact_form'),
     path('subscribe/',Subscribe.as_view(), name = 'subscribe'),
-    path('post/<int:pk>/',PostDetail.as_view(), name = 'post_detail'),
-    path('post/<int:pk>/comment/', views.add_comment_to_post, name='add_comment_to_post'),
+
+    path('post/<int:pk>/', PostDetail.as_view(), name='post_detail'),
+
+    path('post/<int:pk>/comment', views.add_comment_to_post, name='add_comment_to_post'),
+    # url(r'^post/(?P<pk>\d+)/comment/$', views.add_comment_to_post, name='add_comment_to_post'),
 ]

@@ -1,5 +1,5 @@
 import random
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView,View,DetailView
 from django.core.mail import send_mail
 from bycarlosalas.settings import EMAIL_HOST_USER
@@ -88,16 +88,19 @@ class ContactForm(View):
             }
             return render(request,'contact.html',context)
 
+
 class PostDetail(DetailView):
-    def get(self,request,*args,**kwargs):
+    def get(self, request, *args, **kwargs):
         try:
             post = Post.objects.get(pk=kwargs['pk'])
         except:
             post = None
+
         posts = list(Post.objects.filter(
                 status = True,
                 published = True
                 ).values_list('id',flat = True))
+
         posts.remove(post.id)
         post1 = random.choice(posts)
         posts.remove(post1)
@@ -105,6 +108,7 @@ class PostDetail(DetailView):
         posts.remove(post2)
         post3 = random.choice(posts)
         posts.remove(post3)
+
 
         context = {
             'post':post,
@@ -147,4 +151,3 @@ def add_comment_to_post(request, pk):
     else:
         form = CommentForm()
     return render(request, 'add_comment_to_post.html', {'form': form})
-
