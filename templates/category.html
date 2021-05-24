@@ -41,7 +41,7 @@
                     <div class="blog-latest-items">
                         <article class="post">
                             <figure class="post-thumb">
-                                <a href="{% url 'blog:post_detail' post.slug %}">
+                                <a href="{% url 'blog:post_detail' post.pk %}">
                                     <img src= '{{ post.reference_image.url }}' alt="Blog Image" />
                                 </a>
                             </figure><!-- /.post-thumb -->
@@ -59,14 +59,14 @@
                                 <!-- /.entry-meta -->
                                 <div class="post-body">
                                     <h2 class="entry-title">
-                                        <a href="{% url 'blog:post_detail' post.slug %}">{{ post.title }}</a>
+                                        <a href="{% url 'blog:post_detail' post.pk %}">{{ post.title }}</a>
                                     </h2>
                                     <div class="entry-content">
                                         <p>
                                             {{ post.description }}
                                         </p>
                                         <div class="read-more-wrapper">
-                                            <a class="read-more" href="{% url 'blog:post_detail' post.slug %}">Leer Más</a>
+                                            <a class="read-more" href="{% url 'blog:post_detail' post.pk %}">Leer Más</a>
                                         </div>
                                     </div>
                                     <!-- /.entry-content -->

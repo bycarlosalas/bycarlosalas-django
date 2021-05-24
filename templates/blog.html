@@ -149,7 +149,7 @@
 						<div class="blog-latest-items"> 
 							<article class="post">
 								<figure class="post-thumb">
-									<a href="{% url 'blog:post_detail' post_general.slug %}">
+									<a href="{% url 'blog:post_detail' post_general.pk %}">
 										<img src= '{{ post_general.reference_image.url }}' alt="Blog Image" />
 									</a>
 								</figure><!-- /.post-thumb -->
@@ -167,14 +167,14 @@
 									<!-- /.entry-meta -->
 									<div class="post-body">
 										<h2 class="entry-title">
-											<a href="{% url 'blog:post_detail' post_general.slug %}">{{ post_general.title }}</a>
+											<a href="{% url 'blog:post_detail' post_general.pk %}">{{ post_general.title }}</a>
 										</h2>
 										<div class="entry-content">
 											<p>
 												{{ post_general.description }}
 											</p>
 											<div class="read-more-wrapper">
-												<a class="read-more" href="{% url 'blog:post_detail' post_general.slug %}">Leer Más</a>
+												<a class="read-more" href="{% url 'blog:post_detail' post_general.pk %}">Leer Más</a>
 											</div>
 										</div>
 										<!-- /.entry-content -->
@@ -214,7 +214,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post1.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post1.pk %}" target="_blank">
 									<img src= '{{ post1.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -228,7 +228,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post1.slug %}" target="_blank">{{ post1.title }}</a>
+									<a href="{% url 'blog:post_detail' post1.pk %}" target="_blank">{{ post1.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
@@ -236,7 +236,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post2.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post2.pk %}" target="_blank">
 									<img src= '{{ post2.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -250,7 +250,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post2.slug %}" target="_blank">{{ post2.title }}</a>
+									<a href="{% url 'blog:post_detail' post2.pk %}" target="_blank">{{ post2.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
@@ -258,7 +258,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post3.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post3.pk %}" target="_blank">
 									<img src= '{{ post3.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -272,7 +272,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post3.slug %}" target="_blank">{{ post3.title }}</a>
+									<a href="{% url 'blog:post_detail' post3.pk %}" target="_blank">{{ post3.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
@@ -291,7 +291,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post4.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post4.pk %}" target="_blank">
 									<img src= '{{ post4.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -305,7 +305,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post4.slug %}" target="_blank">{{ post4.title }}</a>
+									<a href="{% url 'blog:post_detail' post4.pk %}" target="_blank">{{ post4.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
@@ -313,7 +313,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post5.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post5.pk %}" target="_blank">
 									<img src= '{{ post5.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -327,7 +327,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post5.slug %}" target="_blank">{{ post5.title }}</a>
+									<a href="{% url 'blog:post_detail' post5.pk %}" target="_blank">{{ post5.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
@@ -335,7 +335,7 @@
 					<div class="col-lg-4 col-md-6">
 						<article class="post post-grid">
 							<figure class="post-thumb">
-								<a href="{% url 'blog:post_detail' post6.slug %}" target="_blank">
+								<a href="{% url 'blog:post_detail' post6.pk %}" target="_blank">
 									<img src= '{{ post6.reference_image.url }}' alt="Blog Image" />
 								</a>
 							</figure><!-- /.post-thumb -->
@@ -349,7 +349,7 @@
 									<!--./ entry-category -->
 								</div><!-- /.entry-meta -->
 								<h2 class="entry-title">
-									<a href="{% url 'blog:post_detail' post6.slug %}" target="_blank">{{ post6.title }}</a>
+									<a href="{% url 'blog:post_detail' post6.pk %}" target="_blank">{{ post6.title }}</a>
 								</h2><!-- /.entry-title -->
 							</div><!-- /.post-details -->
 						</article> <!-- /.post -->
