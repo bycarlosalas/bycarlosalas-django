@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <body>
+        
+            <div class="container">
+              <div class="row">
+                <div class="col-md-7 mb-5">
+                  <form method="post" class="p-5 bg-white">
+                    {% csrf_token %}
+                    <div class="row form-group">
+                      <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fname">Nombre</label>
+                        {{ form.nombre }}
+                      </div>
+                      <div class="col-md-6">
+                        <label class="text-black" for="lname">Apellidos</label>
+                        {{ form.apellidos }}
+                      </div>
+                    </div>
+      
+                    <div class="row form-group">
+      
+                      <div class="col-md-12">
+                        <label class="text-black" for="email">Correo</label>
+                        {{ form.correo }}
+                      </div>
+                    </div>
+      
+                    <div class="row form-group">
+      
+                      <div class="col-md-12">
+                        <label class="text-black" for="subject">Asunto</label>
+                        {{ form.asunto }}
+                      </div>
+                    </div>
+      
+                    <div class="row form-group">
+                      <div class="col-md-12">
+                        <label class="text-black" for="message">Mensaje</label>
+                        {{ form.mensaje }}
+                      </div>
+                    </div>
+      
+                    <div class="row form-group">
+                      <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary py-2 px-4 text-white">ENVIAR </button>
+                      </div>
+                    </div>
+      
+      
+                  </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          
+    </body>
+</html>

@@ -1,0 +1,1054 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Specific Meta
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="Intimate is a One Page Personal & Agency Portfolio Template." />
+	<meta name="keywords"
+		content="HTML5, Template, Design, agency, blog, business, clean, creative, marketing, modern, multipurpose, portfolio, seo, startup, studio, trending" />
+
+	<!-- Titles
+    ================================================== -->
+	<title>Carlos Salas | Digital Advisor</title>
+
+	<!-- Favicons
+    ================================================== -->
+
+	<!-- <link rel="shortcut icon" href="assets/images/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/images/android-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-icon-144x144.png" /> -->
+
+	<link rel="shortcut icon" href='{% static "images/favicon.ico" %}' />
+	<link rel="apple-touch-icon" sizes="72x72" href='{% static "images/android-icon-72x72.png" %}' />
+	<link rel="apple-touch-icon" sizes="114x114" href='{% static "images/apple-icon-144x144.png" %}' />
+
+	<!-- Custom Font
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	
+	<!-- CSS
+    ================================================== -->
+	<!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="assets/css/simple-scrollbar.css" />
+	<link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+	<link rel="stylesheet" href="assets/css/fontawesome.all.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" /> -->
+	
+	<link type='text/css' href='{% static "css/bootstrap.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/owl.carousel.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/simple-scrollbar.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/odometer-theme-default.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/fontawesome.all.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/style.css" %}' rel="stylesheet"/>
+
+	<!-- <script src="assets/js/modernizr.min.js"></script>
+	<script data-ad-client="ca-pub-1243058872351675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+	<script type='text/javascript' src='{% static "js/modernizr.min.js" %}'></script>
+
+	<script data-ad-client="ca-pub-1243058872351675" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navigation-area">
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start Site Header
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<header class="site-header default-header-style">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<div class="navigation-area">
+						<!-- Site Branding -->
+						<div class="site-branding">
+							<a href="index.html">
+								<img src= '{% static "images/logo/logo.png" %}' alt="Site Logo" />
+							</a>
+						</div><!--  /.site-branding -->
+
+						<!-- Site Navigation -->
+						<div class="site-navigation">
+							<nav class="navigation">
+								<!-- Main Menu -->
+								<div class="menu-wrapper">
+									<div class="menu-content">
+										<ul class="mainmenu">
+											<li>
+												<a class="nav-link" href="#inicio">Inicio</a>
+											</li>
+											<li>
+												<a class="nav-link" href="#servicios">Servicios</a>
+											</li>
+											<li>
+												<a class="nav-link" href="#sobremi">Sobre Mi</a>
+											</li>
+											<li>
+												<a class="nav-link" href="#proyectos">Proyectos</a>
+											</li>
+											<li>
+												<a class="nav-link" href="blog">Blog</a>
+											</li>
+											<li>
+												<a class="nav-link" href="#contacto">Contacto</a>
+											</li>
+										</ul> <!-- /.menu-list -->
+									</div> <!-- /.hours-content-->
+								</div><!-- /.menu-wrapper -->
+							</nav>
+						</div><!-- /.site-navigation -->
+						<div class="hamburger-menus">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div><!-- /.hamburger-menus -->
+					</div><!-- /.navigation-area -->
+				</div><!-- /.col-12 -->
+			</div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+		<div class="mobile-sidebar-menu sidebar-menu">
+			<div class="overlaybg"></div>
+		</div>
+	</header>
+	<!--~~./ end site header ~~-->
+
+	<!--********************************************************-->
+	<!--********************* SITE CONTENT *********************-->
+	<!--********************************************************-->
+	<div class="site-content">
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				Hero Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="inicio" class="hero-block personal-home bg-image particles-version"
+			style="background-image: url('static/images/bg/hero-bg-9.jpg');">
+			<div id="particles-js"></div>
+			<div class="waves-effect bottom" style="background-image: url('static/images/others/shape.png');">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="hero-content-area">
+							<div class="hero-desc">
+								Hola<span></span>Soy
+							</div>
+							<h2 class="hero-title">
+								Carlos Salas
+							</h2><!-- /.hero-title -->
+							<ul class="hero-services">
+								<li>Desarrollador de Webs y Apps <br>Diseñador y Estratega Digital</li>
+							</ul>
+							<a href="#sobremi" class="btn btn-primary">Digital Advisor 👨🏻‍💻</a>
+						</div><!-- /.hero-content-area -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.hero-block -->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Services Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="servicios" class="services-block pd-t-170">
+			<div class="container container-1200">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								01 <span>Lo que hago</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Llevemos tus ideas digitales al mundo real</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row services-items-list gutters-30">
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/1.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Dirección de Proyectos</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/3.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Desarrollo Web</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/4.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Desarrollo de Apps</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/5.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Ingeniería de Software</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/6.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Estrategia Digital</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-4 col-md-6">
+						<a class="service-item" href="#portfolio-block">
+							<div class="service-icon">
+								<img src= '{% static "images/icon/services/7.png" %}' alt="Icon" />
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">Gestión Audiovisual</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end services block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start About Us Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="sobremi" class="about-us-block pd-t-170">
+			<div class="container container-1200">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								02 <span>Bienvenido a este espacio</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Creemos juntos tu proxima solución digital</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row align-items-center flex-column-reverse flex-lg-row mrb-55">
+					<div class="col-lg-6">
+						<div class="about-content">
+							<h3 class="heading">Soy Carlos Salas</h3>
+							<p class="description">Mi filosofia gira entorno a contribuir a personas y empresas en la migración 
+								a nuevas tecnologías y soluciones digitales.</p>
+							<p>Desarrollo y lidero proyectos digitales de cualquier industria junto a un gran equipo de profesionales, lo que
+							   nos permite garantizar calidad y cumplimiento.</p>
+							<p>Estoy totalmente convencido que el presente y el futuro está en el escenario digital, por eso me capacito 
+							   constantemente e invito a que otras personas a que creen negocios digitales con potencial de crecimiento.</p>
+							<div class="author-sign">
+								<img src= '{% static "images/about/sign.png" %}' alt="Carlos Salas" />
+							</div>
+						</div><!-- /.about-content -->
+					</div><!-- /.col-lg-6 -->
+					<div class="col-lg-6">
+						<div class="mock-up-thumb">
+							<img src= '{% static "images/about/about.png" %}' alt="About Mock" />
+						</div><!-- /.mock-up-block -->
+					</div><!-- /.col-lg-6 -->
+				</div><!-- /.row -->
+
+				<div class="row">
+					<div class="col-md-6 col-lg-6">
+						<div class="fanfact-promo-numbers">
+							<div class="promo-number">
+								<div class="odometer" data-odometer-final="128">0</div><!-- /.odometer -->
+								<h4 class="promo-title">Clientes Felices</h4><!-- /.promo-title -->
+							</div><!-- /.promo-number -->
+							<div class="promo-number">
+								<div class="odometer" data-odometer-final="11">0</div><!-- /.odometer -->
+								<h4 class="promo-title">Años de Experiencia</h4><!-- /.promo-title -->
+							</div><!-- /.promo-number -->
+							<div class="promo-number">
+								<div class="odometer" data-odometer-final="23">0</div><!-- /.odometer -->
+								<h4 class="promo-title">Conferencias</h4><!-- /.promo-title -->
+							</div><!-- /.promo-number -->
+							<div class="promo-number">
+								<div class="odometer" data-odometer-final="87">0</div><!-- /.odometer -->
+								<h4 class="promo-title">Proyectos Completados</h4><!-- /.promo-title -->
+							</div><!-- /.promo-number -->
+						</div><!-- /.fanfact-promo-numbers -->
+					</div><!-- /.col-lg-6 -->
+
+					<div class="col-md-6 col-lg-6">
+						<div class="skill-with-social">
+							<div class="skill-list">
+								<h3 class="heading">Mis Habilidades</h3>
+								<div class="single-skill">
+									<h3 class="skill-title">Desarrollo y Dirección Web</h3>
+									<div class="progress">
+										<div class="progress-bar" style="width: 90%">
+											<span>90%</span>
+										</div>
+									</div>
+								</div>
+								<!-- /.single-skill -->
+								<div class="single-skill">
+									<h3 class="skill-title">Diseño y Creación Audiovisual</h3>
+									<div class="progress">
+										<div class="progress-bar" style="width: 85%">
+											<span>85%</span>
+										</div>
+									</div>
+								</div><!-- /.single-skill -->
+								<div class="single-skill">
+									<h3 class="skill-title">Marketing y Estrategia Comercial</h3>
+									<div class="progress">
+										<div class="progress-bar" style="width: 95%">
+											<span>95%</span>
+										</div>
+									</div>
+								</div><!-- /.single-skill -->
+							</div><!-- /.skill-list -->
+
+							<div class="social-status">
+								<h3 class="heading">Sígueme</h3>
+								<div class="social-profile-list">
+									<a href="https://www.instagram.com/bycarlosalas/" target="_blank"><i class="fab fa-instagram"></i></a>
+									<a href="https://www.facebook.com/bycarlosalas" target="_blank"><i class="fab fa-facebook-f"></i></a>
+									<a href="https://twitter.com/bycarlosalas" target="_blank"><i class="fab fa-twitter"></i></a>
+									<a href="https://www.linkedin.com/in/bycarlosalas" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+								</div>
+							</div><!-- /.social-status -->
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end about us block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Portfolio Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="proyectos" class="portfolio-block pd-t-170">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								03 <span>Conoce nuestro trabajo</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Trabajamos contigo, no para ti</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+
+			<div class="container custom-container-1650">
+				<div class="row">
+					<div class="col-12 text-center">
+						<ul class="portfolio-filter">
+							<li>
+								<a href="#" data-filter="*" class="filter active">Todo</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".devweb" class="filter">Desarrollo Web y Apps</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".designav" class="filter">Diseño y Audiovisuales</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".eventcap" class="filter">Eventos</a>
+							</li>
+							<li>
+								<a href="#" data-filter=".strategy" class="filter">Estrategia Digital</a>
+							</li>
+						</ul>
+					</div><!-- /.col-12 -->
+				</div><!-- /.row -->
+				<div class="row portfolio-grid gutters-40">
+					<div class="item col-lg-4 col-xl-3 col-md-6 devweb">
+						<a class="portfolio-item" href="https://raving.app">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/1.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Desarrollo de Apps</p>
+									<h3 class="heading">Raving | Music App</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 print eventcap">
+						<a class="portfolio-item" href="https://www.facebook.com/chamorrocityhall/posts/1910705805879314/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/2.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Coordinación Técnica</p>
+									<h3 class="heading">Bogotá, Colombia</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 devweb">
+						<a class="portfolio-item" href="https://izeven.com">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/3.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Ingeniería de Software</p>
+									<h3 class="heading">iZeven LLC</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 strategy">
+						<a class="portfolio-item" href="https://www.instagram.com/p/BzUONbdHXPS/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/4.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Estrategia Digital</p>
+									<h3 class="heading">Oto Creativo, Cali</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 devweb">
+						<a class="portfolio-item" href="https://webmundovirtual.com">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/5.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Desarrollo Web</p>
+									<h3 class="heading">Web Mundo Virtual</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 strategy">
+						<a class="portfolio-item" href="https://www.instagram.com/p/B0JGjOdHqzL/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/6.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Estrategia Digital</p>
+									<h3 class="heading">Ibagué, Colombia</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 eventcap">
+						<a class="portfolio-item" href="https://www.instagram.com/p/CCDss_WD2jx/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/7.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Coordinación Técnica</p>
+									<h3 class="heading">Quito, Ecuador</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 designav">
+						<a class="portfolio-item" href="https://www.instagram.com/smakerecords/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/8.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Creación de Marca</p>
+									<h3 class="heading">Smake Records</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 eventcap">
+						<a class="portfolio-item" href="https://www.facebook.com/photo.php?fbid=10217697755829687&set=pb.1653783415.-2207520000..&type=3">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/9.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Producción General</p>
+									<h3 class="heading">Popayan, Colombia</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 print devweb">
+						<a class="portfolio-item" href="https://spectrumcolombia.com.co">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/10.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Desarrollo Web</p>
+									<h3 class="heading">Spectrum Colombia</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 designav">
+						<a class="portfolio-item" href="#">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/11.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Personaje Corporativo</p>
+									<h3 class="heading">Oto Creativo</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+
+					<div class="item col-lg-4 col-xl-3 col-md-6 strategy">
+						<a class="portfolio-item" href="https://www.instagram.com/p/B2Wra1YjjPn/">
+							<figure class="portfolio-thumb">
+								<img src= '{% static "images/portfolio/12.png" %}' alt="portfolio Item">
+							</figure><!-- /.portfolio-thumb -->
+							<div class="overlay-wrapper">
+								<div class="overlay"></div><!-- /.overlay -->
+								<div class="portfolio-info">
+									<p class="cat">Estrategia Digital</p>
+									<h3 class="heading">Cali, Colombia</h3>
+								</div><!-- /.portfolio-info -->
+							</div><!-- /.overlay-wrapper -->
+						</a><!-- /.portfolio-item -->
+					</div><!-- /.col-xl-3 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end portfolio block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Testimonial Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="testimonial-block" class="testimonial-block pd-t-170">
+			<div class="container container-1200">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								04 <span>Herramientas de Desarrollo</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Frameworks y lenguajes que hacen tus ideas realidad.</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row justify-content-center">
+					<div class="col-lg-11">
+						<!-- Testimonial Slider -->
+						<div class="owl-carousel testimonial-slider carousel-nav-circle carousel-nav-center">
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/python.png" %}' "assets/images/" alt="Python" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">Python</h4>
+										<p class="client-designation">
+											Lenguaje de programación
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Presente en muchas de aplicaciones y sistemas operativos. Podemos encontrarlo 
+										corriendo en servidores, en aplicaciones iOS, Android, Linux, Windows o Mac.
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/laravel.png" %}' alt="Laravel" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">Laravel</h4>
+										<p class="client-designation">
+											Framework
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Laravel es un framework de código abierto para desarrollar aplicaciones y 
+										servicios web con PHP 5, PHP 7 y PHP 8, permite desarrollar desarrollar 
+										código PHP de forma elegante.
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src='{% static "images/testimonail/vuejs.png" %}' alt="Vuejs" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">Vuejs</h4>
+										<p class="client-designation">
+											Framework
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Progresivo y de código abierto para interfaces de usuario y aplicaciones, cuenta 
+										con arquitectura de adaptación gradual (representación declarativa, composición 
+										de componentes).
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/html.png" %}' alt="HTML" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">HTML</h4>
+										<p class="client-designation">
+											Lenguaje de Marcado
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Es un lenguaje de marcado que nos permite indicar estructuras. Nos 
+										ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpre­tar 
+										tanto por humanos como por máquinas.
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/css.png" %}' alt="CSS" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">CSS</h4>
+										<p class="client-designation">
+											Lenguaje de Diseño
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Diseñado para marcar la separación del contenido del documento 
+										y la forma de presentación de este, características tales como las capas o layouts, 
+										los colores y las fuentes.
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/css.png" %}' alt="CSS" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">Java Script</h4>
+										<p class="client-designation">
+											Lenguaje de Programación
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										Utilizado principalmente para el cliente, implementado como parte de un navegador 
+										web permitiendo mejoras interactivas para el usuario, del lado del 
+										servidor (Server-side JavaScript o SSJS)
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+							<div class="testimonial-item">
+								<div class="client-area">
+									<div class="client-thumb">
+										<img src= '{% static "images/testimonail/ionic.png" %}' alt="IONIC" />
+									</div><!-- /.client-thumb -->
+									<div class="client-info">
+										<h4 class="client-name">Ionic</h4>
+										<p class="client-designation">
+											Mobile App Framework
+										</p>
+									</div><!-- /.client-info -->
+								</div>
+								<div class="details">
+									<p>
+										SDK completo de código abierto para aplicaciones móviles 
+										híbridas, permite lanzar web progresivas, app móviles y de escritorio híbridas 
+										utilizando tecnologías web como CSS , HTML5 y Sass 
+									</p>
+								</div><!-- /.details -->
+							</div><!-- /.testimonial-item -->
+						</div>
+					</div>
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!--~~./ end testimonial block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Últimas entradas del blog
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="blog" class="latest-news-block pd-t-170 pd-b-170">
+			<div class="container container-1200 ml-b-30">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								05 <span>Últimas entradas del blog</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Contenido de gran valor sobre el mundo digital</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row latest-news-list gutters-30">
+
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="blog/migrando-al-mundo-del-teletrabajo.html" target="_blank">
+									<img src= '{% static "images/blog/blog-lastentries/01-teletrabajo-inicio.jpg" %}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ blog.views.main.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="#">Trabajo en Casa</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="blog/migrando-al-mundo-del-teletrabajo.html" target="_blank">Migrando al mundo del teletrabajo</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end latest news block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Site Footer
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<footer id="contacto" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="contact-block">
+							<div class="section-title">
+								<h2 class="title-main">
+									✔ <span>Escríbeme</span>
+								</h2><!-- /.title-main -->
+								<p class="sub-title">Me encantaría ayudarte en tu proyecto, Envíame un mensaje y te contactaré pronto.</p>
+							</div><!-- /.section-title -->
+							<div class="contact-form-area">
+								<form id="contact_form" class="contact-form" action="#">
+									<div class="row gx-4">
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input id="name" name="name" type="text" class="form-control" placeholder="Tu Nombre*">
+											</div>
+										</div>
+										<!--./ col-lg-6-->
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input class="form-control" id="email" name="email" type="email" placeholder="Tu Email*">
+											</div>
+										</div>
+										<!--./ col-lg-6 -->
+										<div class="col-12">
+											<div class="form-group">
+												<textarea id="message" name="message" class="form-control" rows="4"
+													placeholder="Cuéntame, ¿en que te puedo ayudar?"></textarea>
+											</div>
+										</div><!-- /.col-12 -->
+										<div class="col-12">
+											<button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+										</div>
+										<!--./ col-lg-6 -->
+									</div><!-- /.row -->
+								</form><!-- /.contact-form -->
+							</div><!-- /.contact-form-area -->
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer-content-wrapper">
+							<div class="footer-widget-area">
+								<div class="row">
+									<!--~~~~~ Start Widget Links ~~~~~-->
+									<div class="col-lg-6 col-md-6">
+										<aside class="widget widget_links">
+											<h2 class="widget-title"><span>Enlaces Rápidos</span></h2>
+											<div class="widget-content">
+												<ul>
+													<li><a href="#inicio">Inicio</a></li>
+													<li><a href="#servicios">Servicios</a></li>
+													<li><a href="#sobremi">Sobre Mi</a></li>
+													<li><a href="#proyectos">Proyectos</a></li>
+													<li><a href="blog.html">Blog</a></li>
+												</ul>
+											</div>
+										</aside>
+									</div>
+									<!--~./ end links widget ~-->
+									<!--~~~~~ Start Widget Links ~~~~~-->
+									<div class="col-lg-6 col-md-6">
+										<aside class="widget widget_contact">
+											<div class="widget-content">
+												<div class="single-contact-info">
+													<div class="icon">
+														<i class="fas fa-envelope"></i>
+													</div>
+													<p><a href="mailto:contacto@bycarlosalas.com">contacto@bycarlosalas.com</a></p>
+												</div><!-- /.single-contact-info -->
+												<div class="single-contact-info">
+													<div class="icon">
+														<i class="fas fa-phone-alt"></i>
+													</div>
+													<p>(+57) 323 289 8478</p>
+												</div><!-- /.single-contact-info -->
+											</div>
+										</aside>
+									</div>
+									<!--~./ end links widget ~-->
+								</div>
+							</div>
+							<!--~./ end footer widgets area ~-->
+							<div class="copyright-text text-center">
+								<p>® <a href="https://bycarlosalas.com">CARLOS SALAS </a> 2021</p>
+							</div>
+							<!--~./ end copyright text ~-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--~./ end site footer ~-->
+	</div>
+	<!--~~./ end site content ~~-->
+
+	<!-- All The JS Files
+			================================================== -->
+	<!-- <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/plugins.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/js/simple-scrollbar.min.js"></script>
+	<script src="assets/js/background-parallax.js"></script>
+	<script src="assets/js/theia-sticky-sidebar.min.js"></script>
+	<script src="assets/js/ResizeSensor.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/packery-mode.pkgd.min.js"></script>
+	<script src="assets/js/scrolla.jquery.min.js"></script>
+	<script src="assets/js/odometer.min.js"></script>
+	<script src="assets/js/isInViewport.jquery.js"></script>
+	<script src="assets/js/contact.js"></script>
+	<script src="assets/js/main.js"></script> -->
+
+	<script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/popper.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/bootstrap.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/plugins.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/imagesloaded.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/simple-scrollbar.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/background-parallax.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/theia-sticky-sidebar.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/ResizeSensor.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/owl.carousel.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/isotope.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/packery-mode.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/scrolla.jquery.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/odometer.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/isInViewport.jquery.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/contact.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/main.js" %}'></script>
+
+	<!-- main-js -->
+
+	<!-- This script use for this page -->
+	<script type='text/javascript' src='{% static "js/particle-animation.js" %}'></script>
+	<!-- <script src="assets/js/particle-animation.js"></script> -->
+	<script>
+		particlesJS('particles-js', {
+			"particles": {
+				"number": {
+					"value": 50,
+					"density": {
+						"enable": true,
+						"value_area": 800
+					}
+				},
+				"color": {
+					"value": "#888"
+				},
+				"shape": {
+					"type": "circle",
+					"stroke": {
+						"width": 0,
+						"color": "#888"
+					},
+					"polygon": {
+						"nb_sides": 5
+					},
+					"image": {
+						"src": "img/github.svg",
+						"width": 100,
+						"height": 100
+					}
+				},
+				"opacity": {
+					"value": 0.5,
+					"random": false,
+					"anim": {
+						"enable": false,
+						"speed": 3,
+						"opacity_min": 0.1,
+						"sync": false
+					}
+				},
+				"size": {
+					"value": 5,
+					"random": true,
+					"anim": {
+						"enable": false,
+						"speed": 40,
+						"size_min": 0.1,
+						"sync": false
+					}
+				},
+				"line_linked": {
+					"enable": true,
+					"distance": 150,
+					"color": "#888",
+					"opacity": 0.4,
+					"width": 1
+				},
+				"move": {
+					"enable": true,
+					"speed": 6,
+					"direction": "none",
+					"random": false,
+					"straight": false,
+					"out_mode": "out",
+					"attract": {
+						"enable": false,
+						"rotateX": 600,
+						"rotateY": 1200
+					}
+				}
+			},
+			"interactivity": {
+				"detect_on": "canvas",
+				"events": {
+					"onhover": {
+						"enable": true,
+						"mode": "repulse"
+					},
+					"onclick": {
+						"enable": true,
+						"mode": "push"
+					},
+					"resize": true
+				},
+				"modes": {
+					"grab": {
+						"distance": 400,
+						"line_linked": {
+							"opacity": 1
+						}
+					},
+					"bubble": {
+						"distance": 400,
+						"size": 40,
+						"duration": 2,
+						"opacity": 8,
+						"speed": 3
+					},
+					"repulse": {
+						"distance": 200
+					},
+					"push": {
+						"particles_nb": 4
+					},
+					"remove": {
+						"particles_nb": 2
+					}
+				}
+			},
+			"retina_detect": true,
+			"config_demo": {
+				"hide_card": false,
+				"background_color": "#b61924",
+				"background_image": "",
+				"background_position": "50% 50%",
+				"background_repeat": "no-repeat",
+				"background_size": "cover"
+			}
+		}
+		);
+	</script>
+</body>
+
+</html>

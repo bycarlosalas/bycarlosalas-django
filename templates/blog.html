@@ -1,0 +1,656 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Specific Meta
+    ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="description" content="Intimate is a One Page Personal & Agency Portfolio Template." />
+	<meta name="keywords"
+		content="HTML5, Template, Design, agency, blog, business, clean, creative, marketing, modern, multipurpose, portfolio, seo, startup, studio, trending" />
+
+	<!-- Titles
+    ================================================== -->
+	<title>{% block title %} Carlos Salas | Blog {% endblock title %}</title>
+
+	<!-- Favicons
+    ================================================== -->
+	<link rel="shortcut icon" href='{% static "images/favicon.ico" %}' />
+	<link rel="apple-touch-icon" sizes="72x72" href='{% static "images/android-icon-72x72.png" %}' />
+	<link rel="apple-touch-icon" sizes="114x114" href='{% static "images/apple-icon-144x144.png" %}' />
+
+	<!-- Custom Font
+	================================================== -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- CSS
+    ================================================== -->
+	<link type='text/css' href='{% static "css/bootstrap.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/owl.carousel.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/simple-scrollbar.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/odometer-theme-default.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/fontawesome.all.min.css" %}' rel="stylesheet"/>
+	<link type='text/css' href='{% static "css/style.css" %}' rel="stylesheet"/>
+	{% block extracss %}
+	{% endblock extracss %}
+
+	<script type='text/javascript' src='{% static "js/modernizr.min.js" %}'></script>
+</head>
+
+<body>
+
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Site Header
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<header class="site-header header-style-one">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12">
+					<div class="navigation-area">
+						<!-- Site Branding -->
+						<div class="site-branding">
+							<a href="index.html">
+								<img src= '{% static "images/logo/logo.png" %}' alt="Site Logo" />
+							</a>
+						</div><!--  /.site-branding -->
+
+						<!-- Site Navigation -->
+						<div class="site-navigation">
+							<nav class="navigation">
+								<!-- Main Menu -->
+								<div class="menu-wrapper">
+									<div class="menu-content">
+										<ul class="mainmenu">
+											<li>
+												<a class="nav-link" href="">Inicio</a>
+											</li>
+											<li>
+												<a class="nav-link" href="index.html#servicios">Servicios</a>
+											</li>
+											<li>
+												<a class="nav-link" href="index.html#sobremi">Sobre Mi</a>
+											</li>
+											<li>
+												<a class="nav-link" href="index.html#proyectos">Proyectos</a>
+											</li>
+											<li>
+												<a class="nav-link" href="blog.html">Blog</a>
+											</li>
+											<li>
+												<a class="nav-link" href="#contacto">Contacto</a>
+											</li>
+										</ul> <!-- /.menu-list -->
+									</div> <!-- /.hours-content-->
+								</div><!-- /.menu-wrapper -->
+							</nav>
+						</div><!-- /.site-navigation -->
+						<div class="hamburger-menus">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div><!-- /.hamburger-menus -->
+					</div><!-- /.navigation-area -->
+				</div><!-- /.col-12 -->
+			</div><!-- /.row -->
+		</div><!-- /.container-fluid -->
+		<div class="mobile-sidebar-menu sidebar-menu">
+			<div class="overlaybg"></div>
+		</div>
+	</header>
+	<!--~~./ end site header ~~-->
+
+	<!--********************************************************-->
+	<!--********************* SITE CONTENT *********************-->
+	<!--********************************************************-->
+
+	{% block body %}
+	<div class="site-content bg-white-smoke">
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Page Title Area
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div class="page-title-area bg-white-smoke">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								BLOG<span>Articulos</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Ultima Entrada Blog</p>
+							<!--~~./ page-header-caption ~~-->
+						</div>
+						<!--~~./ page-header-content ~~-->
+					</div>
+				</div>
+			</div>
+			<!--~~./ end container ~~-->
+		</div>
+		<!--~~./ end page title area ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Blog Page Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div class="blog-page-block bg-white-smoke pd-b-0">
+			<div class="container">
+				<!-- Content Row -->
+				<div class="row justify-content-center">
+					<div class="col-lg-9">
+
+						<!-- Blog Items -->
+						<div class="blog-latest-items"> 
+							<article class="post">
+								<figure class="post-thumb">
+									<a href="{% url 'blog:post_detail' post_general.slug %}">
+										<img src= '{{ post_general.reference_image.url }}' alt="Blog Image" />
+									</a>
+								</figure><!-- /.post-thumb -->
+
+								<div class="post-details">
+									<!-- /.entry-title -->
+									<div class="entry-meta">
+										<div class="entry-category">
+											<a class="cat" href="{{ post_general.category }}">{{ post_general.category|upper }}</a>
+										</div>
+										<!--./ entry-category -->
+										<div class="entry-date">{{ post_general.publication_date }}</div>
+										<!--./ entry-date -->
+									</div>
+									<!-- /.entry-meta -->
+									<div class="post-body">
+										<h2 class="entry-title">
+											<a href="{% url 'blog:post_detail' post_general.slug %}">{{ post_general.title }}</a>
+										</h2>
+										<div class="entry-content">
+											<p>
+												{{ post_general.description }}
+											</p>
+											<div class="read-more-wrapper">
+												<a class="read-more" href="{% url 'blog:post_detail' post_general.slug %}">Leer Más</a>
+											</div>
+										</div>
+										<!-- /.entry-content -->
+									</div>
+								</div><!-- /.post-details -->
+							</article><!-- /.post -->
+						</div>
+						<!-- /.blog-latest-items -->
+
+					</div>
+					<!-- /.col-lg-8 -->
+				</div>
+				<!-- /.row -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!--~~./ end blog page ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Blog Random Row 1
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="blog" class="latest-news-block pd-t-50 pd-b-50">
+			<div class="container container-1200 ml-b-30">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								BLOG<span>Entradas</span>
+							</h2><!-- /.title-main -->
+							<p class="sub-title">Contenido de gran valor sobre el mundo digital</p>
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row latest-news-list gutters-30">
+
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post1.slug %}" target="_blank">
+									<img src= '{{ post1.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post1.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post1.category }}">{{ post1.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post1.slug %}" target="_blank">{{ post1.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post2.slug %}" target="_blank">
+									<img src= '{{ post2.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post2.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post2.category }}">{{ post2.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post2.slug %}" target="_blank">{{ post2.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post3.slug %}" target="_blank">
+									<img src= '{{ post3.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post3.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post3.category }}">{{ post3.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post3.slug %}" target="_blank">{{ post3.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end latest news block ~~-->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Blog Random Row 2
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="blog" class="latest-news-block pd-t-0 pd-b-100">
+			<div class="container container-1200 ml-b-30">
+				<div class="row latest-news-list gutters-30">
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post4.slug %}" target="_blank">
+									<img src= '{{ post4.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post4.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post4.category }}">{{ post4.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post4.slug %}" target="_blank">{{ post4.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post5.slug %}" target="_blank">
+									<img src= '{{ post5.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post5.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post5.category }}">{{ post5.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post5.slug %}" target="_blank">{{ post5.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="post post-grid">
+							<figure class="post-thumb">
+								<a href="{% url 'blog:post_detail' post6.slug %}" target="_blank">
+									<img src= '{{ post6.reference_image.url }}' alt="Blog Image" />
+								</a>
+							</figure><!-- /.post-thumb -->
+							<div class="post-details">
+								<div class="entry-meta">
+									<div class="entry-date">{{ post6.publication_date }}</div>
+									<!--./ entry-date -->
+									<div class="entry-category">
+										<a class="cat" href="{{ post6.category }}">{{ post6.category|upper }}</a>
+									</div>
+									<!--./ entry-category -->
+								</div><!-- /.entry-meta -->
+								<h2 class="entry-title">
+									<a href="{% url 'blog:post_detail' post6.slug %}" target="_blank">{{ post6.title }}</a>
+								</h2><!-- /.entry-title -->
+							</div><!-- /.post-details -->
+						</article> <!-- /.post -->
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end latest news block ~~-->
+
+	
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Categorys
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div id="categorys" class="services-block pd-t-0 pd-b-100">
+			<div class="container container-1200">
+				<div class="row justify-content-center">
+					<div class="col-lg-8">
+						<div class="section-title text-center">
+							<h2 class="title-main">
+								+ <span>Categorias</span>
+							</h2><!-- /.title-main -->
+						</div><!-- /.section-title -->
+					</div><!-- /.col-lg-8 -->
+				</div><!-- /.row -->
+
+				<div class="row services-items-list gutters-30">
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:tecnologia' %}">
+							<div class="service-icon">
+								<i class="fas fa-network-wired"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">TECNOLOGIA</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:productividad' %}">
+							<div class="service-icon">
+								<i class="fas fa-chart-line"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">PRODUCTIVIDAD</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:emprendimiento' %}">
+							<div class="service-icon">
+								<i class="fas fa-rocket"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">EMPRENDIMIENTO</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+
+
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:crecimiento' %}">
+							<div class="service-icon">
+								<i class="fas fa-child"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">CRECIMIENTO</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:criptomonedas' %}">
+							<div class="service-icon">
+								<i class="fab fa-ethereum"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">CRIPTOMONEDAS</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:dev-web' %}">
+							<div class="service-icon">
+								<i class="fas fa-laptop-code"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">DEV-WEB</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+
+
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:ecommerce' %}">
+							<div class="service-icon">
+								<i class="fas fa-shopping-cart"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">ECOMMERCE</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:marketing' %}">
+							<div class="service-icon">
+								<i class="fas fa-funnel-dollar"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">MARKETING</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:finanzas' %}">
+							<div class="service-icon">
+								<i class="fas fa-hand-holding-usd"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">FINANZAS</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+
+
+					<!-- /.col-lg-4 -->
+					<div class="col-lg-3 col-md-6">
+						<a class="service-item" href="{% url 'blog:vida' %}">
+							<div class="iconcategory service-icon">
+								<i class="fas fa-street-view"></i>
+							</div>
+							<!-- /.service-icon -->
+							<h3 class="title">VIDA</h3>
+						</a>
+						<!-- /.service-item -->
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end services block ~~-->
+
+{% endblock body %}
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Follow Me
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div class="social-status2 justify-content-center">
+				<h3 class="heading text-center">Sígueme</h3>
+			<div class="social-profile-list2">
+				<a href="{{ socialmedia.instagram }}" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="{{ socialmedia.facebook }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="{{ socialmedia.twitter }}" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="{{ socialmedia.linkedin }}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+		</div><!-- /.social-status -->
+
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start Site Footer
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<footer id="contacto" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="contact-block">
+							<div class="section-title">
+								<h2 class="title-main">
+									✔ <span>Escríbeme</span>
+								</h2><!-- /.title-main -->
+								<p class="sub-title">Me encantaría ayudarte en tu proyecto, Envíame un mensaje y te contactaré pronto.</p>
+							</div><!-- /.section-title -->
+							
+							<div class="contact-form-area">
+								<form method="post" id="contact">
+									{% csrf_token %}
+									<div class="row gx-4">
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input id="{{ form.first_name }}" name="first_name" type="text" class="form-control" placeholder="Tu Nombre*">
+											</div>
+										</div>
+										<!--./ col-lg-6-->
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input id="{{ form.last_name }}" name="last_name" type="text" class="form-control"placeholder="Tu Apellido*">
+											</div>
+										</div>
+										<!--./ col-lg-6-->
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input id="{{ form.email }}" name="email" type="email" class="form-control" placeholder="Tu Email*">
+											</div>
+										</div>
+										<!--./ col-lg-6 -->
+										<div class="col-lg-6 col-md-6">
+											<div class="form-group">
+												<input id="{{ form.subject }}" name="subject" type="text" class="form-control" placeholder="Asunto*">
+											</div>
+										</div>
+										<!--./ col-lg-6 -->
+										<div class="col-12">
+											<div class="form-group">
+												<textarea id="{{ form.message }}" name="message" class="form-control" rows="4"
+													placeholder="Cuéntame, ¿en que te puedo ayudar?"></textarea>
+											</div>
+										</div><!-- /.col-12 -->
+										<div class="col-12">
+											<button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+										</div>
+										<!--./ col-lg-6 -->
+									</div><!-- /.row -->
+								</form><!-- /.contact-form -->
+							</div><!-- /.contact-form-area -->
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="footer-content-wrapper">
+							<div class="footer-widget-area">
+								<div class="row">
+									<!--~~~~~ Start Widget Links ~~~~~-->
+									<div class="col-lg-6 col-md-6">
+										<aside class="widget widget_links">
+											<h2 class="widget-title"><span>Enlaces Rápidos</span></h2>
+											<div class="widget-content">
+												<ul>
+													<li><a href="index.html">Inicio</a></li>
+													<li><a href="index.html#servicios">Servicios</a></li>
+													<li><a href="index.html#sobremi">Sobre Mi</a></li>
+													<li><a href="index.html#proyectos">Proyectos</a></li>
+													<li><a href="blog.html">Blog</a></li>
+												</ul>
+											</div>
+										</aside>
+									</div>
+									<!--~./ end links widget ~-->
+									<!--~~~~~ Start Widget Links ~~~~~-->
+									<div class="col-lg-6 col-md-6">
+										<aside class="widget widget_contact">
+											<div class="widget-content">
+												<div class="single-contact-info">
+													<div class="icon">
+														<i class="fas fa-envelope"></i>
+													</div>
+													<p><a href="mailto:{{ web.email }}">{{ web.email }}</a></p>
+												</div><!-- /.single-contact-info -->
+												<div class="single-contact-info">
+													<div class="icon">
+														<i class="fas fa-phone-alt"></i>
+													</div>
+													<p>{{ web.phone }}</p>
+												</div><!-- /.single-contact-info -->
+											</div>
+										</aside>
+									</div>
+									<!--~./ end links widget ~-->
+								</div>
+							</div>
+							<!--~./ end footer widgets area ~-->
+							<div class="copyright-text text-center">
+								<p>® <a href="https://bycarlosalas.com">CARLOS SALAS </a> 2021</p><br>
+							</div>
+							<!--~./ end copyright text ~-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--~./ end site footer ~-->
+	</div>
+	<!--~~./ end site content ~~-->
+
+	
+
+	<!-- All The JS Files
+			================================================== -->
+	{% block extrajs %}
+	{% endblock extrajs %}
+	<script type='text/javascript' src='{% static "js/jquery.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/popper.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/bootstrap.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/plugins.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/imagesloaded.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/simple-scrollbar.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/background-parallax.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/theia-sticky-sidebar.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/ResizeSensor.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/owl.carousel.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/isotope.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/packery-mode.pkgd.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/scrolla.jquery.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/odometer.min.js" %}'></script>
+	<script type='text/javascript' src='{% static "js/isInViewport.jquery.js" %}'></script>
+	<!-- <script type='text/javascript' src='{% static "js/contact.js" %}'></script> -->
+	<script type='text/javascript' src='{% static "js/main.js" %}'></script>
+	<!-- main-js -->
+</body>
+
+</html>

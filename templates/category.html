@@ -1,0 +1,117 @@
+{% extends 'blog.html' %}
+{% load static %}
+
+{% block title %} Carlos Salas | {{ category|upper }} {% endblock title %}
+
+{% block body %}
+<div class="site-content bg-white-smoke">
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Category Title Area
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="page-title-area bg-white-smoke">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="title-main">
+                            BLOG<span>{{ category|upper }}</span>
+                        </h2><!-- /.title-main -->
+                        <p class="sub-title">CATEGORIA {{ category|upper }}</p>
+                        <!--~~./ page-header-caption ~~-->
+                    </div>
+                    <!--~~./ page-header-content ~~-->
+                </div>
+            </div>
+        </div>
+        <!--~~./ end container ~~-->
+    </div>
+    <!--~~./ end page title area ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Blog Category Block
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    {% for post in posts %}
+    <div class="blog-page-block bg-white-smoke pd-b-0">
+        <div class="container">
+            <!-- Content Row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+
+                    <!-- Blog Items -->
+                    <div class="blog-latest-items">
+                        <article class="post">
+                            <figure class="post-thumb">
+                                <a href="{% url 'blog:post_detail' post.slug %}">
+                                    <img src= '{{ post.reference_image.url }}' alt="Blog Image" />
+                                </a>
+                            </figure><!-- /.post-thumb -->
+
+                            <div class="post-details">
+                                <!-- /.entry-title -->
+                                <div class="entry-meta">
+                                    <div class="entry-category">
+                                        <a class="cat" href="">{{ post.category }}</a>
+                                    </div>
+                                    <!--./ entry-category -->
+                                    <div class="entry-date">{{ post.publication_date }}</div>
+                                    <!--./ entry-date -->
+                                </div>
+                                <!-- /.entry-meta -->
+                                <div class="post-body">
+                                    <h2 class="entry-title">
+                                        <a href="{% url 'blog:post_detail' post.slug %}">{{ post.title }}</a>
+                                    </h2>
+                                    <div class="entry-content">
+                                        <p>
+                                            {{ post.description }}
+                                        </p>
+                                        <div class="read-more-wrapper">
+                                            <a class="read-more" href="{% url 'blog:post_detail' post.slug %}">Leer Más</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.entry-content -->
+                                </div>
+                            </div><!-- /.post-details -->
+                        </article><!-- /.post -->
+                    </div>
+                    <!-- /.blog-latest-items -->
+
+                </div>
+                <!-- /.col-lg-8 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </div>
+    {% endfor %}
+    <!--~~./ end blog category page ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Start Paging Navigation
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <nav class="paging-navigation paging-center pd-t-50 pd-b-50">
+        <ul class="nav-links">
+
+            {% if posts.has_previous %}
+            <li class="nav-prev">
+                <a href="{{ posts.previous_page_number }}"><i class="fas fa-chevron-left"></i>Hola</a>
+            </li>
+            {% endif %}
+                <li class="active">
+                    <a href="blog2.html" class="page-numbers">{{ posts.number }}</a>
+                </li>
+
+                <li>
+                    <a href="blog2.html" class="page-numbers">{{ posts.paginator.num_pages }}</a>
+                </li>
+            {% if posts.has_next %}
+            <li class="nav-next">
+                <a href="{{ posts.next_page_number }}"><i class="fas fa-chevron-right"></i></a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <!--~./ end paging navigation ~-->
+
+{% endblock body %}

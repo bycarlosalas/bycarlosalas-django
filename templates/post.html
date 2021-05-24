@@ -1,0 +1,253 @@
+{% extends 'blog.html' %}
+{% load static %}
+
+<!-- ESTE ES UN SALUDO DE PRUEBA -->
+
+{% block title %} Carlos Salas | {{ post.title|upper }} {% endblock title %}
+
+{% block body %}
+
+	<!--********************************************************-->
+	<!--********************* SITE CONTENT *********************-->
+	<!--********************************************************-->
+	<div class="site-content bg-white-smoke">
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+				Start Blog Page Block
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<div class="blog-page-block pd-t-100 pd-b-130">
+			<div class="container container-1200">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="blog-single-page">
+
+							<article class="post single-post">
+								<figure class="post-thumb">
+									<img src="{{ post.reference_image.url }}" alt="Blog Image" />
+								</figure><!-- /.post-thumb -->
+								<div class="post-details">
+									<h2 class="entry-title">{{ post.title }}</h2><!-- /.entry-title -->
+									<div class="entry-content">
+										<p>{{ post.contents |safe }}</p>
+
+										<blockquote>
+											<p>¿Que tal si ponemos todo esto en practica y/o compartimos experiencias? o si tienes otros tips 
+												o recomendaciones para teletrabajar deja tus comentarios, quizás sean de ayuda para otras 
+												personas.</p>
+											<p>🤓 Nos leemos en la próxima 🤓</p>
+											<h5 class="name">Carlos Salas</h5>
+										</blockquote>
+
+									</div><!-- /.entry-content -->
+								</div><!-- /.post-details -->
+								<div class="entry-footer">
+									<div class="entry-tag">
+										<strong>Tags : </strong>
+										<div class="tags">
+											<a href="#" rel="tag">Teletrabajo</a>
+										</div>
+									</div>
+									<!--/.entry-tag-->
+								</div>
+							</article><!-- /.post -->
+
+							<div class="entry-share">
+								<strong>Compartir : </strong>
+								<div class="share">
+									<a href="#"><i class="fab fa-facebook-f"></i></a>
+									<a href="#"><i class="fab fa-twitter"></i></a>
+								</div>
+							</div>
+							<!--/.entry-share-->
+							
+							<div id="comments" class="comments-area">
+								<div class="comments-main-content">
+									<div class="row">
+										<div class="col-md-12">
+											<h3 class="section-heading comments-title">Comentarios</h3>
+											<p>Total de Comentarios: {{ post.comments.count }}</p>
+											<!--/.comments-title-->
+										</div>
+										<!--/.col-md-12-->
+									</div>
+									<!--/.row-->
+
+									<div class="row">
+										<div class="col-md-12">
+											<ol class="comment-list">
+												<!--/.comment-body-->
+												<li class="comment">
+													<hr>
+													{% for comment in post.comments.all %}
+													<div class="comment-body">
+														<div class="comment-meta">
+															<div class="comment-author vcard">
+																<div class="author-img">
+																	<img alt="" src="{{ comment.reference_image.url }}" class="avatar photo">
+																</div>
+															</div>
+															<!--/.comment-author-->
+															<div class="comment-metadata"><b class="author">{{ comment.author }}</b>
+																<span class="date">{{ comment.created_date }}</span>
+															</div>
+															<!--/.comment-metadata-->
+														</div>
+														<!--/.comment-meta-->
+														<div class="comment-details">
+															<div class="comment-content">
+																<p>{{ comment.text|linebreaks }}</p>
+															</div>
+															<!--/.comment-content-->
+															<a href="#" class="comment-reply-link">Reply </a>
+														</div><!-- /.comment-details-->
+													</div>
+													<!--/.comment-body-->
+													{% empty %}
+													<p>Sé el primero en comentar 😉 </p>
+													{% endfor %}
+												
+												<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+													Start Paging Comments
+												~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+												<nav class="paging-navigation paging-center pd-t-50 pd-b-50">
+													<ul class="nav-links">
+											
+														{% if comments.has_previous %}
+														<li class="nav-prev">
+															<a href="{{ comments.previous_page_number }}"><i class="fas fa-chevron-left"></i>Hola</a>
+														</li>
+														{% endif %}
+															<li class="active">
+																<a href="blog2.html" class="page-numbers">{{ comments.number }}</a>
+															</li>
+											
+															<li>
+																<a href="blog2.html" class="page-numbers">{{ comments.paginator.num_pages }}</a>
+															</li>
+														{% if comments.has_next %}
+														<li class="nav-next">
+															<a href="{{ comments.next_page_number }}"><i class="fas fa-chevron-right"></i></a>
+														</li>
+														{% endif %}
+													</ul>
+												</nav>
+
+												<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+													End Paging Comments
+												~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+												</li>
+												<!--/.comment-body-->
+											</ol>
+											<!--/.comment-list-->
+										</div>
+										<!--/.col-md-12-->
+									</div>
+									<!--/.row-->
+								</div><!-- /.comments-main-content -->
+							</div>
+							<!-- /.comments-area -->
+
+							<div class="comment-respond">
+								<form action="#" class="comment-form">
+									<h3 class="comment-reply-title section-heading">Deja tu comentario</h3>
+									<div class="row">
+										<div class="col-lg-6 col-md-6">
+											<div class="group">
+												<label for="name">Nombre completo*</label>
+												<input id='{{ comment.name }}' type="text" class="form-control" placeholder="Nombre completo">
+											</div>
+										</div><!-- /.col-lg-6 -->
+										<div class="col-lg-6 col-md-6">
+											<div class="group">
+												<label for="email">Correo electrónico*</label>
+												<input id='{{ comment.email }}' type="email" class="form-control" placeholder="Correo electrónico">
+											</div>
+										</div><!-- /.col-lg-6 -->
+										<div class="col-12">
+											<div class="group">
+												<label for="message">Escribe tu comentario</label>
+												<textarea id="{{ comment.text }}" class="form-control" rows="4" cols="50"
+													placeholder="Escribe tu comentario"></textarea>
+											</div>
+										</div><!-- /.col-12 -->
+										
+										<div class="form-submit clearfix">
+											<a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
+										<div id="comments" ></div>
+										</div><!-- /.submit -->
+									</div><!-- /.row -->
+								</form>
+							</div>
+						</div><!--  /.blog-latest-items -->
+					</div><!-- /.col-lg-8 -->
+
+					<div class="col-lg-4">
+						<!-- Sidebar Items -->
+						<div class="sidebar-items">
+							<!--~~~~~ Start Ads Widget ~~~~~-->
+							<aside class="widget widget_ads">
+								<h4 class="widget-title">Ads</h4><!-- /.widget-title -->
+								<div class="widget-content">
+									<img src="../assets/images/widget/ads.jpg" alt="Ads">
+								</div><!-- /.widget-content -->
+							</aside>
+							<!--~./ end ads widget ~-->
+
+							<!--~~~~~ Start Categories Widget ~~~~~-->
+							<aside class="widget widget_categories">
+								<h4 class="widget-title">Categorias</h4><!-- /.widget-title -->
+								<div class="widget-content">
+									<ul>
+										<li><a href="{% url 'blog:tecnologia' %}">TECNOLOGIA</a></li>
+										<li><a href="{% url 'blog:productividad' %}">PRODUCTIVIDAD</a></li>
+										<li><a href="{% url 'blog:emprendimiento' %}">EMPRENDIMIENTO</a></li>
+										<li><a href="{% url 'blog:crecimiento' %}">CRECIMIENTO</a></li>
+                                        <li><a href="{% url 'blog:criptomonedas' %}">CRIPTOMONEDAS</a></li>
+										<li><a href="{% url 'blog:dev-web' %}">DEV-WEB</a></li>
+										<li><a href="{% url 'blog:ecommerce' %}">ECOMMERCE</a></li>
+										<li><a href="{% url 'blog:marketing' %}">MARKETING</a></li>
+                                        <li><a href="{% url 'blog:finanzas' %}">FINANZAS</a></li>
+										<li><a href="{% url 'blog:vida' %}">VIDA <span>00</span></a></li>
+									</ul>
+								</div><!-- /.widget-content -->
+							</aside>
+							<!--~./ end categories widget ~-->
+
+							<!--~~~~~ Start Gallery Widget ~~~~~-->
+							<aside class="widget widget_gallery">
+								<h4 class="widget-title">Galería</h4><!-- /.widget-title -->
+								<div class="widget-content gallery-content">
+									<div class="gallery-item">
+										<img src="../assets/images/portfolio/1.png" alt="Gallery">
+									</div>
+									<div class="gallery-item">
+										<img src="../assets/images/portfolio/12.png" alt="Gallery">
+									</div>
+									<div class="gallery-item">
+										<img src="../assets/images/portfolio/8.png" alt="Gallery">
+									</div>
+									<div class="gallery-item">
+										<img src="../assets/images/portfolio/6.png" alt="Gallery">
+									</div>
+								</div><!-- /.widget-content -->
+							</aside>
+							<!--~./ end Gallery widget ~-->
+
+							<!--~~~~~ Start Tags Widget ~~~~~-->
+							<aside class="widget widget_tagcloud">
+								<h4 class="widget-title">Tags</h4><!-- /.widget-title -->
+								<div class="widget-content tagcloud">
+									<a href="#">Teletrabajo</a>
+								</div><!-- /.widget-content -->
+							</aside>
+							<!--~./ end tags widget ~-->
+						</div><!--  /.sidebar-items -->
+					</div><!-- /.col-lg-4 -->
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+		<!--~~./ end blog page ~~-->
+
+
+{% endblock body %}
